@@ -1,0 +1,24 @@
+dialog {
+    position: fixed;
+    left: unset;
+    right: 1em;
+    bottom: 1em;
+    margin: 0;
+    border: solid 1px #718096;
+    border-radius: 0.5em;
+}
+
+dialog.modal {
+    width: 50%;
+    height: auto;
+    right: unset;
+    bottom: unset;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &::backdrop {
+        background: pink;
+        opacity: 0.5;
+    }
+}

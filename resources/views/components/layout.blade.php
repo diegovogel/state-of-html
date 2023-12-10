@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/scss/style.scss', 'resources/js/app.js'])
 
     <meta http-equiv="X-UA-Compatible"
           content="IE=edge"/>

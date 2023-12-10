@@ -38,9 +38,40 @@
         <code>&lt;details&gt;</code> can also be animated with the Web Animations API, though it is non-trivial.
     </p>
 
-{{--  TODO: highly-styled collapsible page section.  --}}
-
     <h2><code>&lt;dialog&gt;</code></h2>
+
+    <p>A simple <code>&lt;dialog&gt;</code> can be implemented totally JS-free.</p>
+
+    <p>Most cases will require a little JS. But the API is simple.</p>
+
+    <p><code>&lt;dialog&gt;</code> can be a modal or not.</p>
+
+    <button class="open-regular-dialog">Regular Dialog</button>
+
+    <button class="open-modal-dialog">Modal Dialog</button>
+
+    <dialog open>
+        <p>This dialog uses no JavaScript!!! 🤠</p>
+        <form method="dialog">
+            <button>OK then...</button>
+        </form>
+    </dialog>
+
+    <dialog class="regular">
+        <p>Just a regular old dialog.</p>
+
+        <button class="close-dialog">Close</button>
+    </dialog>
+
+    <dialog class="modal">
+        <p>My favorite seal.</p>
+
+        <img src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+             alt="">
+
+        <button class="close-dialog">Close</button>
+    </dialog>
+
 
     <h2><code>&lt;popover&gt;</code></h2>
 </x-layout>
