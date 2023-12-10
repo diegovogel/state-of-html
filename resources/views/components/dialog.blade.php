@@ -1,0 +1,3 @@
+<dialog {{ $attributes }}>
+    {{ $slot }}
+</dialog>

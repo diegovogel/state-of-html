@@ -1,7 +1,9 @@
 <x-layout>
     <h1>Demo B</h1>
 
-    <h2><code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code></h2>
+    <h2>
+        <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>
+    </h2>
 
     <details>
         <summary>Basic Example</summary>
@@ -38,13 +40,19 @@
         <code>&lt;details&gt;</code> can also be animated with the Web Animations API, though it is non-trivial.
     </p>
 
-    <h2><code>&lt;dialog&gt;</code></h2>
+    <h2>
+        <code>&lt;dialog&gt;</code>
+    </h2>
 
-    <p>A simple <code>&lt;dialog&gt;</code> can be implemented totally JS-free.</p>
+    <p>
+        A simple <code>&lt;dialog&gt;</code> can be implemented totally JS-free.
+    </p>
 
     <p>Most cases will require a little JS. But the API is simple.</p>
 
-    <p><code>&lt;dialog&gt;</code> can be a modal or not.</p>
+    <p>
+        <code>&lt;dialog&gt;</code> can be a modal or not.
+    </p>
 
     <button class="open-regular-dialog">Regular Dialog</button>
 
@@ -52,6 +60,7 @@
 
     <dialog open>
         <p>This dialog uses no JavaScript!!! 🤠</p>
+
         <form method="dialog">
             <button>OK then...</button>
         </form>
@@ -71,7 +80,6 @@
 
         <button class="close-dialog">Close</button>
     </dialog>
-
 
     <h2><code>&lt;popover&gt;</code></h2>
 </x-layout>
