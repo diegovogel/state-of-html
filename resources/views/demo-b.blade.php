@@ -51,12 +51,16 @@
     <p>Most cases will require a little JS. But the API is simple.</p>
 
     <p>
-        <code>&lt;dialog&gt;</code> can be a modal or not.
+        <code>&lt;dialog&gt;</code> has two modes: regular and modal.
     </p>
 
-    <button class="open-regular-dialog">Regular Dialog</button>
+    <button class="open-dialog" data-target="dialog.regular">Regular Dialog</button>
 
-    <button class="open-modal-dialog">Modal Dialog</button>
+    <button class="open-dialog" data-target="dialog.modal">Modal Dialog</button>
+
+    <button class="open-dialog" data-target="dialog.slide-in">Slide-in Panel</button>
+
+    <button class="open-dialog" data-target="dialog.toast">Toast Alert</button>
 
     <dialog open>
         <p>This dialog uses no JavaScript!!! 🤠</p>
@@ -79,6 +83,29 @@
              alt="">
 
         <button class="close-dialog">Close</button>
+    </dialog>
+
+    <dialog class="slide-in">
+        <h3>Menu.</h3>
+
+        <ul class="menu-list">
+            <li><a href="https://www.example1.com">Example 1</a></li>
+            <li><a href="https://www.example2.com">Example 2</a></li>
+            <li><a href="https://www.example3.com">Example 3</a></li>
+            <li><a href="https://www.example4.com">Example 4</a></li>
+            <li><a href="https://www.example5.com">Example 5</a></li>
+            <li><a href="https://www.example6.com">Example 6</a></li>
+            <li><a href="https://www.example7.com">Example 7</a></li>
+            <li><a href="https://www.example8.com">Example 8</a></li>
+            <li><a href="https://www.example9.com">Example 9</a></li>
+            <li><a href="https://www.example10.com">Example 10</a></li>
+        </ul>
+
+        <button class="close-dialog">Close</button>
+    </dialog>
+
+    <dialog class="toast">
+        I'll go away soon. 👍
     </dialog>
 
     <h2><code>&lt;popover&gt;</code></h2>

@@ -22,3 +22,34 @@ dialog.modal {
         opacity: 0.5;
     }
 }
+
+dialog.slide-in {
+    left: unset;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    transform: translate(100%);
+    transition: 0.5s;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    padding: 1rem 3rem;
+    height: 100vh;
+    border: none;
+    border-left: solid 1px #718096;
+    background: #edf2f7;
+
+    &[open] {
+        transform: translate(0);
+    }
+}
+
+.menu-list {
+    padding: 0;
+    list-style: none;
+}
+
+dialog.toast {
+    background: palegreen;
+}

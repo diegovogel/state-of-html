@@ -31,3 +31,19 @@ h2 {
 h2:not(:first-of-type) {
     margin: 70vh 0 0.5em;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: solid 1px #1a202c;
+    border-radius: 0.3em;
+    background: #e5e7eb;
+    padding: 0.3em 1em;
+    transition: 0.2s;
+
+    &:hover {
+        background: white;
+    }
+}

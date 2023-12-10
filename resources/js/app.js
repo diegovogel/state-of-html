@@ -1,18 +1,22 @@
 import './bootstrap';
 
-const regularDialog = document.querySelector('dialog.regular');
-const modalDialog = document.querySelector('dialog.modal');
-const openRegularDialog = document.querySelector('.open-regular-dialog');
-const openModalDialog = document.querySelector('.open-modal-dialog');
 const closeDialogButtons = document.querySelectorAll('button.close-dialog');
+const openDialogButtons = document.querySelectorAll('button[data-target]');
 
-openRegularDialog.addEventListener('click', () => {
-    regularDialog.show();
-})
+openDialogButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const dialog = document.querySelector(button.dataset.target);
 
-openModalDialog.addEventListener('click', () => {
-    modalDialog.showModal();
-})
+        if (dialog.classList.contains('modal')) dialog.showModal();
+        else dialog.show();
+
+        if (dialog.classList.contains('toast')) {
+            setTimeout(() => {
+                dialog.close();
+            }, 3000)
+        }
+    });
+});
 
 closeDialogButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
