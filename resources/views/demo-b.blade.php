@@ -1,3 +1,11 @@
+@push('stylesheets')
+    @vite(['resources/scss/demo-b.scss'])
+@endpush
+
+@push('body-scripts')
+    @vite(['resources/js/demo-b.js'])
+@endpush
+
 <x-layout>
     <h1>Demo B</h1>
 
