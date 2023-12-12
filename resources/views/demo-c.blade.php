@@ -8,6 +8,8 @@
 <x-layout>
     <h1>Demo C: Web Components</h1>
 
+    <p class="support"><em>97% support.</em></p>
+
     <p>Benefit: framework agnostic. Use <strong>the same components</strong> across multiple websites.</p>
 
     <p>Features include:</p>

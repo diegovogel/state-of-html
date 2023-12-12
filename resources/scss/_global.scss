@@ -54,7 +54,7 @@ button {
 
 .support {
     background: lightgreen;
-    padding: 0.3em;
+    padding: 0.3em 0.6em;
     display: inline-block;
 }
 
@@ -62,12 +62,12 @@ button {
     display: flex;
     flex-flow: row wrap;
     gap: 1em;
+}
 
-    a {
+a {
+    color: royalblue;
+
+    &:visited {
         color: royalblue;
-
-        &:visited {
-            color: royalblue;
-        }
     }
 }
