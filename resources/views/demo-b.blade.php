@@ -9,7 +9,13 @@
 <x-layout>
     <h1>Demo B</h1>
 
-    <h2>
+    <nav class="demo-b-page-nav">
+        <a href="#details">Details and Summary</a>
+        <a href="#dialog">Dialog</a>
+        <a href="#popover">Popover API</a>
+    </nav>
+
+    <h2 id="details">
         <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>
     </h2>
 
@@ -57,7 +63,7 @@
         potenti.
     </details>
 
-    <h2>
+    <h2 id="dialog">
         <code>&lt;dialog&gt;</code>
     </h2>
 
@@ -138,7 +144,7 @@
         I'll go away soon. 👍
     </dialog>
 
-    <h2><code>Popover API</code></h2>
+    <h2 id="popover"><code>Popover API</code></h2>
 
     <p>A set of HTML attributes and JS API for creating and controlling dialog-like behavior in other kinds of elements.</p>
 

@@ -12,6 +12,8 @@
 
     <p>Scan the QR code to view the MDN <code>capture</code> demo.</p>
 
+    <hr>
+
     <sl-qr-code value="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/capture#try_it"></sl-qr-code>
 
     <style>
