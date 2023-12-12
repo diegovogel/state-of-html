@@ -28,3 +28,7 @@ Route::get('/sandbox', function () {
 Route::get('/demo-a', function () {
     return view('demo-a');
 });
+
+Route::get('/demo-c', function () {
+    return view('demo-c');
+});

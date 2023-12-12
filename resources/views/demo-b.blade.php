@@ -13,6 +13,8 @@
         <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>
     </h2>
 
+    <p class="support"><em>98% support.</em></p>
+
     <p>A pair of elements for creating collapsible content.</p>
 
     <ul>

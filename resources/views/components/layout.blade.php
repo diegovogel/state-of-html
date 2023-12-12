@@ -24,6 +24,12 @@
 <body>
 
 <main>
+    <nav class="main-nav">
+        <a href="/demo-a">Demo A</a>
+        <a href="/demo-b">Demo B</a>
+        <a href="/demo-c">Demo C</a>
+        <a href="/more">More</a>
+    </nav>
     {{ $slot }}
 </main>
 
