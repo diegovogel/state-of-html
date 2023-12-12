@@ -1,0 +1,42 @@
+[popover] {
+    &.styled {
+        border-radius: 0.5em;
+        border: solid 1px #718096;
+        padding: 1em;
+    }
+
+    &.corner {
+        left: 1rem;
+        bottom: 1rem;
+        margin: 0;
+        top: unset;
+        right: unset;
+    }
+
+    &.backdrop {
+        &::backdrop {
+            background: cornflowerblue;
+            opacity: 50%;
+        }
+    }
+}
+
+[popover].animated:popover-open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+[popover].animated {
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: opacity 2s,
+                transform 2s,
+                display 2s allow-discrete;
+}
+
+@starting-style {
+    [popover].animated:popover-open {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+}

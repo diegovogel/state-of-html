@@ -7,7 +7,7 @@ main {
 body {
     font-family: -apple-system, sans-serif;
     line-height: 1.5;
-    padding-bottom: 100vh;
+    padding-bottom: 50vh;
 }
 
 img {
@@ -43,7 +43,11 @@ button {
     padding: 0.3em 1em;
     transition: 0.2s;
 
-    &:hover {
+    &:hover, &:focus {
         background: white;
+    }
+
+    &:has(+ button), + button {
+        margin: 0.5em;
     }
 }

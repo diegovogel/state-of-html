@@ -13,6 +13,17 @@
         <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>
     </h2>
 
+    <p>A pair of elements for creating collapsible content.</p>
+
+    <ul>
+        <li>Easily styled, including open/closed states thanks to `open` attribute.</li>
+        <li>Animating open/close is possible but a little gross. It's either complicated (Web Animations API) or hacky
+            (hidden checkbox stuff).
+        </li>
+    </ul>
+
+    <hr>
+
     <details>
         <summary>Basic Example</summary>
 
@@ -44,31 +55,40 @@
         potenti.
     </details>
 
-    <p>
-        <code>&lt;details&gt;</code> can also be animated with the Web Animations API, though it is non-trivial.
-    </p>
-
     <h2>
         <code>&lt;dialog&gt;</code>
     </h2>
 
-    <p>
-        A simple <code>&lt;dialog&gt;</code> can be implemented totally JS-free.
-    </p>
+    <p>An element and JS API for creating a box or other interactive component, such as a dismissible alert, inspector,
+        or
+        subwindow.</p>
 
-    <p>Most cases will require a little JS. But the API is simple.</p>
+    <ul>
+        <li>A very simple <code>&lt;dialog&gt;</code> can be implemented without JS.</li>
+        <li>Most cases will require a little JS. But the API is simple.</li>
+        <li>Accessibility for dialog-like UI elements is complicated, but it's all built-in with
+            <code>&lt;dialog&gt;</code>.
+        </li>
+        <li><code>&lt;dialog&gt;</code> has two modes: <em>modal</em> and <em>non-modal</em> or <em>modeless</em>.</li>
+    </ul>
 
-    <p>
-        <code>&lt;dialog&gt;</code> has two modes: regular and modal.
-    </p>
+    <hr>
 
-    <button class="open-dialog" data-target="dialog.regular">Regular Dialog</button>
+    <button class="open-dialog"
+            data-target="dialog.regular">Regular Dialog
+    </button>
 
-    <button class="open-dialog" data-target="dialog.modal">Modal Dialog</button>
+    <button class="open-dialog"
+            data-target="dialog.modal">Modal Dialog
+    </button>
 
-    <button class="open-dialog" data-target="dialog.slide-in">Slide-in Panel</button>
+    <button class="open-dialog"
+            data-target="dialog.slide-in">Slide-in Panel
+    </button>
 
-    <button class="open-dialog" data-target="dialog.toast">Toast Alert</button>
+    <button class="open-dialog"
+            data-target="dialog.toast">Toast Alert
+    </button>
 
     <dialog open>
         <p>This dialog uses no JavaScript!!! 🤠</p>
@@ -116,5 +136,89 @@
         I'll go away soon. 👍
     </dialog>
 
-    <h2><code>&lt;popover&gt;</code></h2>
+    <h2><code>Popover API</code></h2>
+
+    <p>A set of HTML attributes and JS API for creating and controlling dialog-like behavior in other kinds of elements.</p>
+
+    <p><code>popover</code> vs <code>&lt;dialog&gt;</code>:</p>
+
+    <ul>
+        <li>Popovers are never modal, <code>&lt;dialog&gt;</code> can be.</li>
+        <li>Always in the top layer. <code>&lt;dialog&gt;</code> only in top layer when modal.</li>
+        <li>Can be completely controlled via HTML, no JS required.</li>
+        <li>"light dismiss", click outside to hide.</li>
+        <li>No focus trapping, but does affect focus navigation order.</li>
+        <li>Can always be closed with <code>Esc</code> key. <code>&lt;dialog&gt;</code> only closed if modal.</li>
+    </ul>
+
+    <hr>
+
+    <button popovertarget="basic-popover">Toggle Default Popover</button>
+
+    <button popovertarget="corner-popover">Toggle Corner Popover</button>
+
+    <button popovertarget="corner-popover"
+            popovertargetaction="show">Open Corner Popover
+    </button>
+
+    <button popovertarget="corner-popover"
+            popovertargetaction="hide">Close Corner Popover
+    </button>
+
+    <button popovertarget="manual-popover">Toggle Manual Popover
+    </button>
+
+    <button popovertarget="backdrop-popover">Toggle Backdrop Popover</button>
+
+    <button popovertarget="animated-popover">Toggle Animated Popover</button>
+
+    <button popovertarget="dialog-popover">Toggle Dialog Popover</button>
+
+    <button>Extra Button</button>
+
+    <div id="basic-popover"
+         popover>
+        <p>So basic.</p>
+
+        <button popovertarget="basic-popover">Close</button>
+    </div>
+
+    <div id="corner-popover"
+         class="styled corner"
+         popover>
+        <p>In your corner.</p>
+
+        <button popovertarget="corner-popover">Close</button>
+    </div>
+
+    <div id="manual-popover"
+         class="styled corner"
+         popover="manual">
+        <p>Close me like you mean it.</p>
+
+        <button popovertarget="manual-popover">Close</button>
+    </div>
+
+    <div id="backdrop-popover"
+         class="styled backdrop"
+         popover>
+        <p>All eyes on me.</p>
+
+        <button popovertarget="backdrop-popover">Close</button>
+    </div>
+
+    <div id="animated-popover"
+         class="animated styled corner"
+         popover>
+        <p>Soooo smoooooth.</p>
+
+        <button popovertarget="animated-popover">Close</button>
+    </div>
+
+    <dialog id="dialog-popover" class="styled corner" popover>
+        <p>Dialog! Popover!</p>
+
+        <button popovertarget="dialog-popover">Close</button>
+    </dialog>
+
 </x-layout>
