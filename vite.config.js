@@ -8,7 +8,9 @@ export default defineConfig({
                 'resources/scss/app.scss',
                 'resources/scss/demo-b.scss',
                 'resources/scss/sandbox.scss',
-                'resources/js/app.js'
+                'resources/js/app.js',
+                'resources/js/demo-b.js',
+                'resources/js/sandbox.js'
             ],
             refresh: true,
         }),
