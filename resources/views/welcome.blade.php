@@ -11,4 +11,6 @@
     </ul>
 
     <p class="warning"><strong>NOTE:</strong> this site includes some HTML/CSS features that are hot off the press or experimental. For best results, view in the latest version of Chrome or Edge.</p>
+
+    <p class="warning">Also, this site was built to be viewed on a <strong>computer</strong>, for a presentation. So it's ugly and broken if viewed on a phone.</p>
 </x-layout>
