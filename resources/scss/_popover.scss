@@ -21,6 +21,9 @@
     }
 }
 
+// To preserve the popover's built-in accessibility, we animate the `display` property. This is pretty neat, but currently only works in Chromium browsers.
+// For more details on what's going on here, see MDN: https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using#animating_popovers
+
 [popover].animated:popover-open {
     transform: translateY(0);
     opacity: 1;

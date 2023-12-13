@@ -17,16 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demo-b', function () {
-    return view('demo-b');
-});
-
-Route::get('/sandbox', function () {
-    return view('sandbox');
-});
-
 Route::get('/demo-a', function () {
     return view('demo-a');
+});
+
+Route::get('/demo-b', function () {
+    return view('demo-b');
 });
 
 Route::get('/demo-c', function () {
@@ -35,4 +31,8 @@ Route::get('/demo-c', function () {
 
 Route::get('/more', function () {
     return view('more');
+});
+
+Route::get('/sandbox', function () {
+    return view('sandbox');
 });

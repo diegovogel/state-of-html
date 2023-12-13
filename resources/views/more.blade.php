@@ -64,6 +64,10 @@
 
     <h2>Go take the survey!</h2>
 
+    <p>You can't actually <em>take</em> the survey anymore because it's closed. But you can still go through it and see what all the questions were. It's a fantastic resource and this presentation barely scratches the surface of what's in there.</p>
+
+    <a href="https://survey.devographics.com/en-US/survey/state-of-html/2023/outline/1" target="_blank">See the survey</a>
+
     <style>
         details {
             border: solid 1px #cbd5e0;

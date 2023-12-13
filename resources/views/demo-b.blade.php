@@ -7,7 +7,7 @@
 @endpush
 
 <x-layout>
-    <h1>Demo B</h1>
+    <h1>Demo B: Handy Interactive Elements</h1>
 
     <nav class="demo-b-page-nav">
         <a href="#details">Details and Summary</a>
@@ -24,7 +24,7 @@
     <p>A pair of elements for creating collapsible content.</p>
 
     <ul>
-        <li>Easily styled, including open/closed states thanks to `open` attribute.</li>
+        <li>Easily styled, including open/closed states thanks to <code>open</code> attribute.</li>
         <li>Animating open/close is possible but a little gross. It's either complicated (Web Animations API) or hacky
             (hidden checkbox stuff).
         </li>
@@ -68,8 +68,7 @@
     </h2>
 
     <p>An element and JS API for creating a box or other interactive component, such as a dismissible alert, inspector,
-        or
-        subwindow.</p>
+        or subwindow.</p>
 
     <ul>
         <li>A very simple <code>&lt;dialog&gt;</code> can be implemented without JS.</li>
@@ -77,11 +76,15 @@
         <li>Accessibility for dialog-like UI elements is complicated, but it's all built-in with
             <code>&lt;dialog&gt;</code>.
         </li>
-        <li><code>&lt;dialog&gt;</code> has two modes: <em>modal</em> and <em>non-modal</em> or <em>modeless</em>.</li>
+        <li><code>&lt;dialog&gt;</code> has two modes:
+            <a href="https://en.wikipedia.org/wiki/Modal_window#:~:text=A%20modal%20window%20creates%20a%20mode%20that%20disables%20user%20interaction%20with%20the%20main%20window%20but%20keeps%20it%20visible%2C%20with%20the%20modal%20window%20as%20a%20child%20window%20in%20front%20of%20it.%20Users%20must%20interact%20with%20the%20modal%20window%20before%20they%20can%20return%20to%20the%20parent%20window."
+               target="_blank"><em>modal</em></a> and <em>non-modal</em> or <em>modeless</em>.
+        </li>
     </ul>
 
     <hr>
 
+    <!-- `data-target` on these buttons is not a requirement of the dialog API. It's only needed for the re-usable JS I wrote for opening dialogs.-->
     <button class="open-dialog"
             data-target="dialog.regular">Regular Dialog
     </button>
@@ -101,6 +104,7 @@
     <dialog open>
         <p>This dialog uses no JavaScript!!! 🤠</p>
 
+        <!-- `method="dialog"` makes the button close the dialog. -->
         <form method="dialog">
             <button>OK then...</button>
         </form>
@@ -146,7 +150,8 @@
 
     <h2 id="popover"><code>Popover API</code></h2>
 
-    <p>A set of HTML attributes and JS API for creating and controlling dialog-like behavior in other kinds of elements.</p>
+    <p>A set of HTML attributes and JS API for creating and controlling dialog-like behavior in other kinds of
+        elements.</p>
 
     <p><code>popover</code> vs <code>&lt;dialog&gt;</code>:</p>
 
@@ -173,6 +178,7 @@
             popovertargetaction="hide">Close Corner Popover
     </button>
 
+    <!-- A manual popover cannot be light-dismissed. -->
     <button popovertarget="manual-popover">Toggle Manual Popover
     </button>
 
@@ -182,6 +188,7 @@
 
     <button popovertarget="dialog-popover">Toggle Dialog Popover</button>
 
+    <!-- This is just here to show how the dialog popover affects focus navigation order. -->
     <button>Extra Button</button>
 
     <div id="basic-popover"
@@ -223,7 +230,9 @@
         <button popovertarget="animated-popover">Close</button>
     </div>
 
-    <dialog id="dialog-popover" class="styled corner" popover>
+    <dialog id="dialog-popover"
+            class="styled corner"
+            popover>
         <p>Dialog! Popover!</p>
 
         <button popovertarget="dialog-popover">Close</button>

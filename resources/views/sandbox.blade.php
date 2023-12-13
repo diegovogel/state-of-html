@@ -9,11 +9,12 @@
 <x-layout>
     <h1>Sandbox</h1>
 
-    <button class="open">Open</button>
+    <button popovertarget="mypopover" popovertargetaction="show">Click Me</button>
 
-    <dialog>
-        Here's a little message.
+    <div id="mypopover" popover>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam
+        malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 
-        <button class="close">OK</button>
-    </dialog>
+        <button popovertarget="mypopover">Close</button>
+    </div>
 </x-layout>

@@ -10,6 +10,8 @@
 
     <p class="support"><em>99.5% support in mobile browsers.</em></p>
 
+    <p>A way to capture and upload media directly to a <code>file</code> input from a mobile device.</p>
+
     <p>Scan the QR code to view the MDN <code>capture</code> demo.</p>
 
     <hr>

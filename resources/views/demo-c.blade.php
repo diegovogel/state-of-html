@@ -12,20 +12,39 @@
 
     <p>Benefit: framework agnostic. Use <strong>the same components</strong> across multiple websites.</p>
 
-    <p>Features include:</p>
+    <p>Web Components have similar features as other component systems (React, Vue, Blade, etc), including:</p>
 
     <ul>
         <li>Slots</li>
         <li>Properties</li>
-        <li>Parts</li>
+        <li>Events</li>
+        <li>Methods</li>
     </ul>
+
+    <p>Making Web Components is a bit too complicated for this demo 😅, so we will use a library called <a href="https://shoelace.style/" target="_blank">Shoelace</a> (it's pretty great, go check it out!) to play around with some Web Component features.</p>
 
     <hr>
 
     <div class="shoelace-demos">
-        <sl-button>
-            Button
-        </sl-button>
+        <div class="buttons">
+            <sl-button>
+                Button
+            </sl-button>
+
+            <sl-button size="large">
+                Large Button
+            </sl-button>
+
+            <sl-button>
+                <sl-icon slot="prefix"
+                         name="gear"></sl-icon>
+                Button with Prefix slot filled
+            </sl-button>
+
+            <sl-button class="bold">
+                Bold Blue Text
+            </sl-button>
+        </div>
 
         <sl-progress-bar value="0"></sl-progress-bar>
 
@@ -52,6 +71,17 @@
             padding: 3em 0;
         }
 
+        .buttons {
+            display: flex;
+            gap: 2em;
+            align-items: center;
+        }
+
+        .bold::part(label) {
+            color: dodgerblue;
+            font-weight: bold;
+        }
+
         sl-progress-bar {
             width: 100%;
         }
@@ -65,14 +95,22 @@
         function updateProgress() {
             let value = parseInt(progressBar.getAttribute('value'));
 
+            // Reset when we get to 100%.
             if (value >= 100) {
-                value = -20;
+                value = 0;
             }
 
+            // Update every 200ms.
             setTimeout(() => {
-                progressBar.setAttribute('value', value + 20);
+                value = value + 2;
+
+                progressBar.setAttribute('value', value);
+
+                // Put the percentage in the default slot of the web component.
+                progressBar.innerHTML = value + '%';
+
                 updateProgress();
-            }, 2000);
+            }, 200);
         }
     </script>
 </x-layout>
